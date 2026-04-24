@@ -13,7 +13,7 @@ export default function Hero({ onBookClick }) {
         style={{
           position: 'relative',
           zIndex: 3,
-          padding: '120px 20px 140px',
+          padding: '120px 20px 100px',
           minHeight: 620,
           display: 'flex',
           flexDirection: 'column',
@@ -62,7 +62,37 @@ export default function Hero({ onBookClick }) {
           <br />
           밸런스치과병원는 정확한 진단과 충분한 상담을 원칙으로 합니다.
         </p>
-        <div style={{ display: 'flex', gap: 12, marginTop: 32, flexWrap: 'wrap' }}>
+        {/* 병원 소개 동영상 */}
+        <div
+          className="hero-video-wrap"
+          style={{
+            marginTop: 2,
+              marginBottom: 12,
+            width: '100%',
+            maxWidth: 480,
+            borderRadius: 14,
+            overflow: 'hidden',
+            position: 'relative',
+            paddingTop: 'calc(min(480px, 100%) * 9 / 16)',
+            boxShadow: '0 8px 28px rgba(28,30,29,0.18)',
+          }}
+        >
+          <iframe
+            src="https://www.youtube.com/embed/wHpvI1MQfJs?rel=0"
+            title="밸런스치과병원 소개"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+            }}
+          />
+        </div>
+        <div style={{ display: 'flex', gap: 12, marginTop: 24, flexWrap: 'wrap' }}>
           <button className="btn btn-primary btn-lg" onClick={onBookClick}>
             <Icon name="calendar" size={18} /> Balance AI 상담
           </button>

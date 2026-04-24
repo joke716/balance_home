@@ -75,7 +75,7 @@ const DOCTORS = [
   {
     name: '황현식',
     role: '교수 · 교정',
-    image: '/assets/doctors/hwang-hyunsik.jpg',
+    image: '/assets/doctors/hwang-hyunsik.jpeg',
     bio: [
       '전남대학교 치과대학 전 학장',
       '미국 펜실베니아 치대 치주교정 연수',
