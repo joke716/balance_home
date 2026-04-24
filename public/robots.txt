@@ -1,0 +1,103 @@
+# ============================================================
+# 밸런스치과병원 — robots.txt
+# 최종 업데이트: 2026-04-24
+# ============================================================
+
+# ── 구글 계열 봇 ──────────────────────────────────────────
+# 메인 크롤러
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+
+# 이미지 인덱싱 (구글 이미지 검색)
+User-agent: Googlebot-Image
+Allow: /assets/
+
+# 동영상 인덱싱 (유튜브 임베드 포함)
+User-agent: Googlebot-Video
+Allow: /
+
+# 뉴스 크롤러
+User-agent: Googlebot-News
+Allow: /
+
+# 구글 광고 품질 평가
+User-agent: AdsBot-Google
+Allow: /
+
+# 구글 URL 검사 도구
+User-agent: Google-InspectionTool
+Allow: /
+
+# 구글 모바일 품질 평가
+User-agent: Mediapartners-Google
+Allow: /
+
+# ── 네이버 계열 봇 ──────────────────────────────────────
+# 메인 크롤러 (네이버 검색·Cue: AI 검색)
+User-agent: Yeti
+Allow: /
+Allow: /assets/
+Crawl-delay: 1
+
+# 네이버 사이트맵 전용 크롤러
+User-agent: NaverBot
+Allow: /
+Crawl-delay: 1
+
+# 네이버 이미지 크롤러
+User-agent: Yeti-Images
+Allow: /assets/
+
+# ── 카카오 계열 봇 ──────────────────────────────────────
+# 카카오톡 링크 미리보기
+User-agent: Kakaotalk-Scrap
+Allow: /
+Allow: /assets/
+
+# 카카오 검색
+User-agent: Kakao
+Allow: /
+
+# 카카오 채널
+User-agent: kakaocorp-web
+Allow: /
+
+# ── 주요 글로벌 봇 (AI 인덱싱 포함) ──────────────────────
+# 빙 (마이크로소프트 Copilot 연동)
+User-agent: bingbot
+Allow: /
+
+# 마이크로소프트 미리보기
+User-agent: msnbot
+Allow: /
+
+# 다음카카오
+User-agent: Daumoa
+Allow: /
+
+# 애플 (Siri·Spotlight 검색)
+User-agent: Applebot
+Allow: /
+
+# 퍼플렉시티 AI
+User-agent: PerplexityBot
+Allow: /
+
+# ChatGPT / OpenAI 크롤러
+User-agent: GPTBot
+Allow: /
+
+# Claude (Anthropic)
+User-agent: ClaudeBot
+Allow: /
+
+# 공통 기본값
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /src/
+
+# ── 사이트맵 ──────────────────────────────────────────────
+Sitemap: https://www.balance-dental.co.kr/sitemap.xml
