@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <circle cx="18" cy="30" r="10" stroke="#2F6E68" stroke-width="2.4"></circle>
+  <text x="38" y="40" font-family="MaruBuri, Noto Serif KR, serif" font-size="28" font-weight="700" letter-spacing="-1" fill="#1C1E1D">밸런스</text>
+  <text x="136" y="40" font-family="MaruBuri, Noto Serif KR, serif" font-size="28" font-weight="700" letter-spacing="-1" fill="#2F6E68">치과</text>
+</svg>
