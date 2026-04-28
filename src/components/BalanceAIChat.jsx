@@ -1,6 +1,31 @@
+import { useEffect, useRef, useState } from 'react';
+
 const CHAT_URL = 'https://mpegs-examined-loving-brooks.trycloudflare.com/';
 
 export default function BalanceAIChat() {
+  const frameWrapRef = useRef(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
+
+  useEffect(() => {
+    if (shouldLoad) return;
+    const node = frameWrapRef.current;
+    if (!node || typeof IntersectionObserver === 'undefined') {
+      setShouldLoad(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldLoad(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: '300px 0px' }
+    );
+    io.observe(node);
+    return () => io.disconnect();
+  }, [shouldLoad]);
+
   return (
     <section id="balance-ai" className="section" style={{ background: 'var(--paper)' }}>
       <div className="container" style={{ maxWidth: 880 }}>
@@ -11,6 +36,7 @@ export default function BalanceAIChat() {
           Balance AI에게 바로 물어보세요
         </h2>
         <div
+          ref={frameWrapRef}
           style={{
             background: '#fff',
             borderRadius: 14,
@@ -18,21 +44,38 @@ export default function BalanceAIChat() {
             overflow: 'hidden',
             boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
             position: 'relative',
+            height: 640,
           }}
         >
-          <iframe
-            src={CHAT_URL}
-            title="BalanceAI 챗봇"
-            allow="clipboard-write; microphone"
-            referrerPolicy="no-referrer-when-downgrade"
-            style={{
-              width: '100%',
-              height: 640,
-              border: 'none',
-              display: 'block',
-              background: '#fff',
-            }}
-          />
+          {shouldLoad ? (
+            <iframe
+              src={CHAT_URL}
+              title="BalanceAI 챗봇"
+              allow="clipboard-write; microphone"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{
+                width: '100%',
+                height: '100%',
+                border: 'none',
+                display: 'block',
+                background: '#fff',
+              }}
+            />
+          ) : (
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--ink-3)',
+                fontSize: 14,
+              }}
+            >
+              챗봇 불러오는 중…
+            </div>
+          )}
         </div>
         <div
           style={{
