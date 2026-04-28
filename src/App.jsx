@@ -27,9 +27,6 @@ export default function App() {
 
   return (
     <>
-      <div className="flag-banner">
-        플레이스홀더 버전 — 실제 브랜드 이미지 및 로고 교체가 필요합니다
-      </div>
       <div data-screen-label="Home">
         <Header onBookClick={scrollToBooking} />
         <Hero onBookClick={scrollToBooking} />
