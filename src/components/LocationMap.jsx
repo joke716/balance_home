@@ -130,6 +130,20 @@ export default function LocationMap() {
               >
                 031-622-7528
               </a>
+              <a
+                href="tel:031-8039-7527"
+                style={{
+                  fontSize: 16,
+                  fontWeight: 700,
+                  color: 'var(--ink)',
+                  letterSpacing: '-0.02em',
+                  fontFamily: 'var(--font-display)',
+                  display: 'block',
+                  marginTop: 2,
+                }}
+              >
+                031-8039-7527
+              </a>
             </div>
           </div>
           <a

@@ -91,6 +91,7 @@ export default function Footer() {
         <div>
           <FooterHeading>문의</FooterHeading>
           <FooterLine>031-622-7528</FooterLine>
+          <FooterLine>031-8039-7527</FooterLine>
           <FooterLine>hello@balance-dental.kr</FooterLine>
           <FooterLine style={{ marginTop: 8, color: '#6FA8A1', fontWeight: 600 }}>
             카카오톡 상담 →
@@ -112,7 +113,7 @@ export default function Footer() {
           letterSpacing: '-0.01em',
         }}
       >
-        <div>© 2026 Balance Dental Hospital · 사업자등록번호 123-45-67890</div>
+        <div>© 2026 Balance Dental Hospital · 사업자등록번호 846-11-00931</div>
         <div style={{ display: 'flex', gap: 18 }}>
           <a>개인정보처리방침</a>
           <a>이용약관</a>
