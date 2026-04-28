@@ -90,8 +90,7 @@ export default function Footer() {
         </div>
         <div>
           <FooterHeading>문의</FooterHeading>
-          <FooterLine>031-622-7528</FooterLine>
-          <FooterLine>031-8039-7527</FooterLine>
+          <FooterLine>031-622-7528 / 031-8039-7527</FooterLine>
           <FooterLine>hello@balance-dental.kr</FooterLine>
           <FooterLine style={{ marginTop: 8, color: '#6FA8A1', fontWeight: 600 }}>
             카카오톡 상담 →

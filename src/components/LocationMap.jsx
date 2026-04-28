@@ -117,33 +117,23 @@ export default function LocationMap() {
               >
                 연락처
               </div>
-              <a
-                href="tel:031-622-7528"
+              <div
                 style={{
                   fontSize: 16,
                   fontWeight: 700,
                   color: 'var(--ink)',
                   letterSpacing: '-0.02em',
                   fontFamily: 'var(--font-display)',
-                  display: 'block',
                 }}
               >
-                031-622-7528
-              </a>
-              <a
-                href="tel:031-8039-7527"
-                style={{
-                  fontSize: 16,
-                  fontWeight: 700,
-                  color: 'var(--ink)',
-                  letterSpacing: '-0.02em',
-                  fontFamily: 'var(--font-display)',
-                  display: 'block',
-                  marginTop: 2,
-                }}
-              >
-                031-8039-7527
-              </a>
+                <a href="tel:031-622-7528" style={{ color: 'inherit' }}>
+                  031-622-7528
+                </a>
+                {' / '}
+                <a href="tel:031-8039-7527" style={{ color: 'inherit' }}>
+                  031-8039-7527
+                </a>
+              </div>
             </div>
           </div>
           <a
