@@ -330,6 +330,7 @@ button { font-family: inherit; cursor: pointer; }
 
   .treatment-scroll { padding: 4px 18px 20px !important; gap: 14px !important; }
   .treatment-scroll > button { flex-basis: 84vw !important; min-height: 300px !important; padding: 20px !important; }
+  .treatment-scroll > div { flex-basis: 84vw !important; }
   .treatment-scroll > button h3,
   .treatment-scroll > button > div:nth-child(3) {
     font-size: 18px !important; line-height: 1.45 !important;
@@ -371,4 +372,5 @@ button { font-family: inherit; cursor: pointer; }
   .section-title { font-size: 21px !important; }
   .btn-lg { font-size: 14px !important; padding: 12px 18px !important; }
   .treatment-scroll > button { flex-basis: 88vw !important; }
+  .treatment-scroll > div { flex-basis: 88vw !important; }
 }
