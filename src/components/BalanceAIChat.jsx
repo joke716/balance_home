@@ -17,20 +17,40 @@ export default function BalanceAIChat() {
             border: '1px solid var(--paper-3)',
             overflow: 'hidden',
             boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
+            position: 'relative',
           }}
         >
           <iframe
             src={CHAT_URL}
             title="BalanceAI 챗봇"
-            loading="lazy"
             allow="clipboard-write; microphone"
+            referrerPolicy="no-referrer-when-downgrade"
             style={{
               width: '100%',
               height: 640,
               border: 'none',
               display: 'block',
+              background: '#fff',
             }}
           />
+        </div>
+        <div
+          style={{
+            marginTop: 12,
+            fontSize: 13,
+            color: 'var(--ink-3)',
+            textAlign: 'center',
+          }}
+        >
+          챗봇이 보이지 않으시나요?{' '}
+          <a
+            href={CHAT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: 'var(--primary)', textDecoration: 'underline' }}
+          >
+            새 창에서 열기
+          </a>
         </div>
       </div>
     </section>
