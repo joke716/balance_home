@@ -44,7 +44,7 @@ export default function BalanceAIChat() {
             overflow: 'hidden',
             boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
             position: 'relative',
-            height: 768,
+            height: 830,
           }}
         >
           {shouldLoad ? (
