@@ -158,7 +158,7 @@ export default function TreatmentGrid({ onSelect }) {
   };
 
   return (
-    <section className="section" style={{ background: 'var(--paper)' }}>
+    <section id="treatments" className="section" style={{ background: 'var(--paper)' }}>
       <div className="container">
         <div
           style={{

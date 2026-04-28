@@ -5,7 +5,7 @@ export default function LocationMap() {
   const mapSrc = `https://www.google.com/maps?q=${q}&hl=ko&z=15&output=embed`;
   const dirHref = `https://www.google.com/maps/search/?api=1&query=${q}`;
   return (
-    <section style={{ background: 'var(--paper-2)', padding: '72px 0 0' }}>
+    <section id="location" style={{ background: 'var(--paper-2)', padding: '72px 0 0' }}>
       <div className="container" style={{ marginBottom: 36 }}>
         <div className="section-label">오시는 길</div>
         <h2 className="section-title" style={{ marginBottom: 0 }}>

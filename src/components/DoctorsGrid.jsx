@@ -102,7 +102,7 @@ export default function DoctorsGrid() {
     if (el) el.scrollBy({ left: delta, behavior: 'smooth' });
   };
   return (
-    <section className="section" style={{ background: 'var(--paper)' }}>
+    <section id="doctors" className="section" style={{ background: 'var(--paper)' }}>
       <div className="container">
         <div className="section-label">의료진 소개</div>
         <h2 className="section-title">각 분야의 전문의가 함께 진료합니다</h2>

@@ -1,6 +1,16 @@
 import { useState, useEffect } from 'react';
 
-const NAV_ITEMS = ['진료안내', '의료진', '오시는 길', '상담후기'];
+const NAV_ITEMS = [
+  { label: '진료안내', id: 'treatments' },
+  { label: '의료진', id: 'doctors' },
+  { label: '오시는 길', id: 'location' },
+];
+
+function scrollToId(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 export default function Header({ onBookClick }) {
   const [scrolled, setScrolled] = useState(false);
@@ -78,18 +88,24 @@ export default function Header({ onBookClick }) {
             밸런스치과병원
           </a>
           <nav style={{ display: 'flex', gap: 28 }} className="hide-mobile">
-            {NAV_ITEMS.map((l) => (
+            {NAV_ITEMS.map((it) => (
               <a
-                key={l}
+                key={it.id}
+                href={`#${it.id}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId(it.id);
+                }}
                 style={{
                   color: 'var(--ink-2)',
                   fontSize: 14,
                   fontWeight: 500,
                   letterSpacing: '-0.01em',
                   cursor: 'pointer',
+                  textDecoration: 'none',
                 }}
               >
-                {l}
+                {it.label}
               </a>
             ))}
           </nav>
@@ -220,10 +236,15 @@ export default function Header({ onBookClick }) {
         </div>
 
         <nav style={{ flex: 1, overflowY: 'auto', padding: '8px 0' }}>
-          {NAV_ITEMS.map((l) => (
+          {NAV_ITEMS.map((it) => (
             <a
-              key={l}
-              onClick={() => setMenuOpen(false)}
+              key={it.id}
+              href={`#${it.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                setMenuOpen(false);
+                setTimeout(() => scrollToId(it.id), 260);
+              }}
               style={{
                 display: 'block',
                 padding: '16px 24px',
@@ -233,9 +254,10 @@ export default function Header({ onBookClick }) {
                 letterSpacing: '-0.01em',
                 cursor: 'pointer',
                 borderBottom: '1px solid var(--paper-2)',
+                textDecoration: 'none',
               }}
             >
-              {l}
+              {it.label}
             </a>
           ))}
         </nav>
