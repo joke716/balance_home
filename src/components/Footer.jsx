@@ -90,10 +90,18 @@ export default function Footer() {
         </div>
         <div>
           <FooterHeading>문의</FooterHeading>
-          <FooterLine>031-622-7528 / 031-8039-7527</FooterLine>
+          <FooterLine>TEL 031-622-7528 / 031-8039-7527</FooterLine>
+          <FooterLine>FAX 031-622-7531</FooterLine>
           <FooterLine>hello@balance-dental.kr</FooterLine>
-          <FooterLine style={{ marginTop: 8, color: '#6FA8A1', fontWeight: 600 }}>
-            카카오톡 상담 →
+          <FooterLine style={{ marginTop: 8 }}>
+            <a
+              href="https://www.mediqr.io/admin/question"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#6FA8A1', fontWeight: 600 }}
+            >
+              카카오톡 상담 →
+            </a>
           </FooterLine>
         </div>
       </div>
