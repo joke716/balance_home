@@ -19,17 +19,19 @@ export default function App() {
     setToast(msg);
     setTimeout(() => setToast(null), 2800);
   };
-  const scrollToBooking = () => {
+  const scrollToId = (id) => {
     document
-      .getElementById('booking')
+      .getElementById(id)
       ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
+  const scrollToBooking = () => scrollToId('booking');
+  const scrollToBalanceAI = () => scrollToId('balance-ai');
 
   return (
     <>
       <div data-screen-label="Home">
-        <Header onBookClick={scrollToBooking} />
-        <Hero onBookClick={scrollToBooking} />
+        <Header onBookClick={scrollToBalanceAI} />
+        <Hero onBookClick={scrollToBalanceAI} />
         <TreatmentGrid onSelect={(it) => setModal(it)} />
         <DirectorMessage />
         <DoctorsGrid />
