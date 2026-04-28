@@ -177,6 +177,20 @@ export default function TreatmentGrid({ onSelect }) {
             </h2>
           </div>
         </div>
+        <p
+          style={{
+            fontSize: 15,
+            color: 'var(--ink-3)',
+            maxWidth: 560,
+            margin: '-16px 0 32px',
+            letterSpacing: '-0.01em',
+            lineHeight: 1.7,
+          }}
+        >
+          임플란트 · 교정 · 무삭제 라미네이트 · 원데이 치료 · 턱관절치료까지,
+          환자분의 구강 상태와 라이프스타일에 맞춰 가장 적절한 치료 계획을 제안드립니다.
+          과한 진료 없이, 꼭 필요한 만큼만 정확하게 진행합니다.
+        </p>
       </div>
       <div
         ref={scrollRef}
