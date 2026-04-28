@@ -8,7 +8,7 @@ export default function BalanceAIChat() {
         <h2 className="section-title">
           궁금한 점은
           <br />
-          AI에게 바로 물어보세요
+          Balance AI에게 바로 물어보세요
         </h2>
         <div
           style={{
