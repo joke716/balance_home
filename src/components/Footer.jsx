@@ -78,7 +78,6 @@ export default function Footer() {
           <FooterHeading>진료 시간</FooterHeading>
           <FooterLine>평일 10:00 — 19:00</FooterLine>
           <FooterLine>토요일 · 일요일 10:00 — 14:00</FooterLine>
-          <FooterLine>공휴일 휴진</FooterLine>
           <FooterLine style={{ marginTop: 8, color: '#B07A56' }}>
             점심시간 13:30 — 14:30
           </FooterLine>
