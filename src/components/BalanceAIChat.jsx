@@ -2,7 +2,7 @@ const CHAT_URL = 'https://mpegs-examined-loving-brooks.trycloudflare.com/';
 
 export default function BalanceAIChat() {
   return (
-    <section className="section" style={{ background: 'var(--paper)' }}>
+    <section id="balance-ai" className="section" style={{ background: 'var(--paper)' }}>
       <div className="container" style={{ maxWidth: 880 }}>
         <div className="section-label">BalanceAI 챗봇</div>
         <h2 className="section-title">

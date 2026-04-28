@@ -30,7 +30,7 @@ const ITEMS = [
 export default function FAQ() {
   const [open, setOpen] = useState(0);
   return (
-    <section className="section" style={{ background: 'var(--paper)' }}>
+    <section id="faq" className="section" style={{ background: 'var(--paper)' }}>
       <div className="container" style={{ maxWidth: 880 }}>
         <div className="section-label">자주 묻는 질문</div>
         <h2 className="section-title">

@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 const NAV_ITEMS = [
   { label: '진료안내', id: 'treatments' },
   { label: '의료진', id: 'doctors' },
+  { label: 'FAQ', id: 'faq' },
+  { label: 'BalanceAI', id: 'balance-ai' },
   { label: '오시는 길', id: 'location' },
 ];
 
