@@ -9,7 +9,6 @@ import BalanceAIChat from './components/BalanceAIChat.jsx';
 import LocationMap from './components/LocationMap.jsx';
 import BookingCTA from './components/BookingCTA.jsx';
 import Footer from './components/Footer.jsx';
-import MobileBookingBar from './components/MobileBookingBar.jsx';
 import TreatmentModal from './components/TreatmentModal.jsx';
 
 export default function App() {
@@ -42,7 +41,6 @@ export default function App() {
         <LocationMap />
         <BookingCTA onSubmit={showToast} />
         <Footer />
-        <MobileBookingBar onBookClick={scrollToBooking} />
 
         <TreatmentModal
           item={modal}
