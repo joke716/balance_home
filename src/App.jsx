@@ -5,6 +5,7 @@ import TreatmentGrid from './components/TreatmentGrid.jsx';
 import DirectorMessage from './components/DirectorMessage.jsx';
 import DoctorsGrid from './components/DoctorsGrid.jsx';
 import FAQ from './components/FAQ.jsx';
+import BalanceAIChat from './components/BalanceAIChat.jsx';
 import LocationMap from './components/LocationMap.jsx';
 import BookingCTA from './components/BookingCTA.jsx';
 import Footer from './components/Footer.jsx';
@@ -37,6 +38,7 @@ export default function App() {
         <DirectorMessage />
         <DoctorsGrid />
         <FAQ />
+        <BalanceAIChat />
         <LocationMap />
         <BookingCTA onSubmit={showToast} />
         <Footer />
