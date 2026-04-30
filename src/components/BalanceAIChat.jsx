@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 
-const CHAT_URL = 'https://compression-respondents-eagles-liabilities.trycloudflare.com/';
+const CHAT_URL = 'https://balanceai.asuscomm.com/';
 
 export default function BalanceAIChat() {
   const frameWrapRef = useRef(null);
