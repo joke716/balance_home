@@ -1,6 +1,6 @@
 # ============================================================
 # 밸런스치과병원 — robots.txt
-# 최종 업데이트: 2026-04-24
+# 최종 업데이트: 2026-05-06
 # ============================================================
 
 # ── 구글 계열 봇 ──────────────────────────────────────────
@@ -88,8 +88,24 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+# OpenAI SearchBot (검색 연동 크롤러)
+User-agent: OAI-SearchBot
+Allow: /
+
 # Claude (Anthropic)
 User-agent: ClaudeBot
+Allow: /
+
+# Google Extended (Bard/Gemini AI 학습 크롤러)
+User-agent: Google-Extended
+Allow: /
+
+# Cohere AI 크롤러
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI 크롤러
+User-agent: FacebookBot
 Allow: /
 
 # 공통 기본값

@@ -69,6 +69,27 @@
     <meta name="twitter:image" content="https://www.balance-dental.co.kr/assets/og-image.jpg" />
 
     <!-- ======================================================
+         AI 검색 최적화 메타 태그
+         구글 AI 오버뷰 · 네이버 Cue: · ChatGPT · Perplexity · Claude 대응
+    ====================================================== -->
+    <!-- AI 봇 크롤링 명시적 허용 -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!-- 구글 AI 오버뷰: 스니펫 제한 없음 허용 -->
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!-- 네이버 Cue: AI 검색 최적화 -->
+    <meta name="Yeti" content="index, follow" />
+    <!-- ChatGPT / OpenAI 크롤러 -->
+    <meta name="oai-searchbot" content="index, follow" />
+    <!-- 사이트 정보 요약 (AI 응답 생성 힌트) -->
+    <meta name="abstract" content="판교 밸런스치과병원 — 보철·교정·구강악안면외과·치주과 전문의 9명 협진. 임플란트·투명교정·무삭제라미네이트·수면진정치료. 판교역 2번 출구." />
+    <meta name="classification" content="치과병원, 전문의 치과, 임플란트, 교정, 라미네이트, 치주과" />
+    <meta name="category" content="Medical, Dental, Healthcare" />
+    <meta name="subject" content="판교 치과 전문 의료 서비스" />
+    <!-- 콘텐츠 최신성 신호 -->
+    <meta name="revised" content="2026-05-06" />
+    <meta name="date" content="2026-05-06" />
+
+    <!-- ======================================================
          JSON-LD 구조화 데이터
          AI 검색(구글 AI 오버뷰 · 네이버 Cue: · ChatGPT · Perplexity) 최적화
     ====================================================== -->
@@ -114,13 +135,13 @@
             {
               "@type": "OpeningHoursSpecification",
               "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-              "opens": "09:00",
-              "closes": "18:30"
+              "opens": "10:00",
+              "closes": "19:00"
             },
             {
               "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "09:00",
+              "dayOfWeek": ["Saturday","Sunday"],
+              "opens": "10:00",
               "closes": "14:00"
             }
           ],
@@ -134,8 +155,8 @@
               "hoursAvailable": {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "09:00",
-                "closes": "18:30"
+                "opens": "10:00",
+                "closes": "19:00"
               }
             },
             {
@@ -168,14 +189,14 @@
               "@type": "MedicalProcedure",
               "name": "임플란트",
               "procedureType": "https://schema.org/SurgicalProcedure",
-              "description": "3D 진단과 가이드 수술로 정확도를 높인 임플란트 식립. 총 20,000개 이상 식립 경험.",
+              "description": "3D 진단과 가이드 수술로 정확도를 높인 임플란트 식립. 총 20,000개 이상 식립 경험. 뼈이식 병행 가능.",
               "bodyLocation": "구강"
             },
             {
               "@type": "MedicalProcedure",
               "name": "투명교정 (클리어얼라이너)",
               "procedureType": "https://schema.org/TherapeuticProcedure",
-              "description": "성인도 일상생활 지장 없이 착용 가능한 투명 교정 장치. 인비절라인 인증의 보유.",
+              "description": "성인도 일상생활 지장 없이 착용 가능한 투명 교정 장치. 인비절라인 인증의 보유. 착탈 가능해 구강 위생 관리 용이.",
               "bodyLocation": "치아"
             },
             {
@@ -203,7 +224,7 @@
               "@type": "MedicalProcedure",
               "name": "수면치료·의식하진정",
               "procedureType": "https://schema.org/TherapeuticProcedure",
-              "description": "치과 공포가 있는 환자도 편안하게 치료받을 수 있는 수면 진정 요법. 수면내시경과 유사한 방식으로 의식은 유지하되 두려움과 불편함을 최소화합니다.",
+              "description": "치과 공포가 있는 환자도 편안하게 치료받을 수 있는 수면 진정 요법. 의식은 유지하되 두려움과 불편함을 최소화합니다.",
               "bodyLocation": "구강"
             },
             {
@@ -298,6 +319,29 @@
         },
 
         {
+          "@type": "MedicalWebPage",
+          "@id": "https://www.balance-dental.co.kr/#webpage",
+          "url": "https://www.balance-dental.co.kr",
+          "name": "밸런스치과병원 | 판교 임플란트·교정·라미네이트·치주 전문",
+          "description": "판교 밸런스치과병원 공식 홈페이지. 보철·교정·구강악안면외과·치주과 전문의 9명 협진, 임플란트·투명교정·무삭제라미네이트·수면진정치료.",
+          "inLanguage": "ko-KR",
+          "isPartOf": { "@id": "https://www.balance-dental.co.kr/#website" },
+          "about": { "@id": "https://www.balance-dental.co.kr/#organization" },
+          "dateModified": "2026-05-06",
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [
+              "h1",
+              ".section-title",
+              ".section-label",
+              ".hero-tagline",
+              ".director-quote",
+              "#faq .faq-panel"
+            ]
+          }
+        },
+
+        {
           "@type": "VideoObject",
           "@id": "https://www.balance-dental.co.kr/#intro-video",
           "name": "밸런스치과병원 소개 영상",
@@ -316,68 +360,142 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "판교 밸런스치과병원 임플란트 치료는 얼마나 걸리나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "개인 구강 상태에 따라 다르지만 일반적으로 3~6개월이 소요됩니다. 3D 스캔 및 X-ray 정밀 진단 후 개인별 치료 기간을 안내드립니다."
-              }
+              "name": "임플란트 치료 기간은 얼마나 걸리나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "개인 구강 상태와 뼈 밀도에 따라 다르지만 일반적으로 3~6개월이 소요됩니다. 뼈이식이 필요한 경우 6~9개월까지 걸릴 수 있으며, 정밀 진단 후 개인별 일정을 안내드립니다." }
             },
             {
               "@type": "Question",
               "name": "임플란트 건강보험 적용이 되나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "만 65세 이상 임플란트는 평생 2개까지 건강보험이 적용됩니다. 그 외 치료는 진단 후 안내드립니다."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "만 65세 이상이라면 평생 2개까지 건강보험이 적용됩니다. 보험 적용 시 본인 부담금이 크게 줄어들며, 자세한 내용은 상담 시 안내드립니다." }
             },
             {
               "@type": "Question",
-              "name": "밸런스치과병원 진료 예약은 어떻게 하나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "전화(031-622-7528) 또는 홈페이지 Balance AI 상담 예약으로 가능합니다. 원하시는 시간대를 함께 알려주시면 편합니다."
-              }
+              "name": "뼈가 부족해도 임플란트가 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "뼈가 부족하더라도 뼈이식(골이식술)을 통해 임플란트 식립이 가능합니다. 3D CT 정밀 진단으로 뼈 상태를 정확히 파악한 후 최적의 방법을 제안해 드립니다." }
             },
             {
               "@type": "Question",
-              "name": "주차는 가능한가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "그레이츠 판교 건물 지하 주차장을 무료로 이용하실 수 있습니다. 방문 도장은 데스크에서 받아 주세요."
-              }
+              "name": "임플란트 수술 후 통증이 심한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "수술 직후 약간의 붓기와 통증이 있을 수 있으나, 처방된 진통제로 충분히 조절됩니다. 대부분 3~5일 이내에 일상생활이 가능하며, 수면진정치료를 함께 이용하시면 더욱 편안하게 받으실 수 있습니다." }
             },
             {
               "@type": "Question",
-              "name": "치료비 카드 결제와 할부가 가능한가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "모든 카드 결제와 무이자 할부가 가능합니다. 치료 전 견적을 투명하게 안내드립니다."
-              }
+              "name": "임플란트 수명은 얼마나 되나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "관리가 잘 될 경우 10~20년 이상 사용할 수 있으며, 정기 검진과 올바른 구강 관리를 통해 자연치처럼 오래 사용하실 수 있습니다." }
             },
             {
               "@type": "Question",
-              "name": "치아를 뽑지 않고 치료할 수 있나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "가능한 한 자연치를 보존하는 방향으로 치료를 설계합니다. 진단 후 대안을 함께 제시해 드립니다."
-              }
+              "name": "임플란트 시술 전 주의사항이 있나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "복용 중인 약(혈액 희석제, 당뇨약 등)이 있다면 반드시 사전에 알려주세요. 수술 당일은 가벼운 식사 후 내원해 주시고, 흡연은 가급적 자제하시면 회복에 도움이 됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "교정 치료 기간은 얼마나 걸리나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "치아 배열 상태에 따라 다르지만 일반적으로 1.5~3년 정도 소요됩니다. 경미한 경우 1년 이내에 완료되기도 하며, 교정과 전문의 상담 후 정확한 기간을 안내드립니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "투명교정과 일반 교정 중 어느 것이 더 좋나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "투명교정(클리어얼라이너)은 심미적으로 눈에 띄지 않아 직장인과 성인에게 적합하고, 착탈이 자유로워 식사와 구강 위생 관리가 용이합니다. 치아 상태에 따라 적합한 방법이 다르므로, 교정과 전문의 진단 후 결정하는 것이 좋습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "성인도 교정 치료가 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "나이와 관계없이 잇몸과 치아 건강이 양호하다면 교정 치료가 가능합니다. 성인 교정은 심미성을 중시한 투명교정이나 설측교정으로 많이 진행하며, 치료 결과도 우수합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "교정 후 유지 장치는 얼마나 착용해야 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "교정 완료 후 치아가 원래 위치로 돌아가지 않도록 유지 장치를 착용해야 합니다. 처음 1~2년은 가급적 항시 착용하고, 이후에는 취침 시에만 착용하는 형태로 전환됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "무삭제 라미네이트가 무엇인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "자연치를 거의 삭제하지 않고 얇은 세라믹 조각을 치아 앞면에 붙이는 심미 치료입니다. 변색된 치아, 작은 치아, 치아 간격 등을 개선할 수 있으며, 자연치를 최대한 보존한다는 것이 가장 큰 장점입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "라미네이트 시술 후 원래 치아로 돌아갈 수 있나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "무삭제·최소삭제 라미네이트의 경우 자연치 손상이 거의 없어 다시 제거하더라도 원래 치아 상태로 돌아갈 수 있습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "원데이 치료는 어떤 경우에 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "충치 치료, 인레이·온레이, 단일 크라운 보철 등이 원데이 치료 대상입니다. 당일 3D 구강 스캔 후 디지털 가공으로 제작하여 같은 날 장착까지 완료합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "수면 치료(의식하진정)가 무엇인가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "수면내시경과 유사한 방식으로, 진정 약물을 이용해 의식은 유지하되 긴장과 불안, 통증에 대한 기억을 최소화하는 치료 방법입니다. 치과 공포증이 있는 분들이나 복잡한 시술을 한 번에 받고 싶은 분들에게 적합합니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "수면 치료 후 바로 운전이 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "진정 효과가 수 시간 지속될 수 있어 당일 운전은 절대 금물입니다. 보호자와 함께 내원하시거나 대중교통을 이용하시기 바랍니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "어떤 치료에 수면 진정이 적용되나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "임플란트, 사랑니 발치, 다수 치아 치료, 스케일링, 교정 장치 부착 등 대부분의 치과 치료에 수면 진정을 적용할 수 있습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "잇몸이 붓고 피가 나면 어떻게 해야 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "잇몸 출혈과 붓기는 치주염(잇몸병)의 초기 증상일 수 있습니다. 증상이 반복된다면 빠른 시일 내 치주과 전문의 진단을 받아보시길 권장합니다. 방치할 경우 치주 조직 손상이 심해질 수 있습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "스케일링은 얼마나 자주 해야 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "건강보험이 적용되는 연 1회 스케일링을 기본으로 권장합니다. 잇몸 상태나 치석 누적 정도에 따라 6개월마다 받으시는 것이 이상적입니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "잇몸 치료에 건강보험이 적용되나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "스케일링, 치석 제거, 치근활택술 등 기본적인 치주 치료는 건강보험이 적용됩니다. 치주 수술 등 일부 치료는 상태에 따라 급여·비급여 여부가 달라지므로, 상담 시 안내드립니다." }
             },
             {
               "@type": "Question",
               "name": "판교 밸런스치과병원 위치가 어디인가요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "경기도 성남시 분당구 백현동 535, 그레이츠 판교(전 크래프톤타워) 3층에 위치합니다. 신분당선 판교역 2번 출구 바로 앞입니다."
-              }
+              "acceptedAnswer": { "@type": "Answer", "text": "경기도 성남시 분당구 백현동 535, 그레이츠 판교(전 크래프톤타워) 3층에 위치합니다. 신분당선 판교역 2번 출구 바로 앞입니다." }
             },
             {
               "@type": "Question",
-              "name": "투명교정과 일반 교정 중 어떤 것이 좋나요?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "투명교정(클리어얼라이너)은 직장생활과 일상에 지장이 없어 성인에게 적합합니다. 치아 상태에 따라 적합한 교정 방법이 다르므로, 교정과 전문의 상담을 통해 결정하는 것이 좋습니다."
-              }
+              "name": "진료 예약은 어떻게 하나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "전화(031-622-7528) 또는 홈페이지 Balance AI 상담 예약으로 가능합니다. 원하시는 날짜와 시간대를 함께 알려주시면 빠르게 안내드리겠습니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "주차는 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "그레이츠 판교 건물 지하 주차장을 무료로 이용하실 수 있습니다. 주차 후 데스크에서 주차 도장을 받으시면 됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "진료 시간이 어떻게 되나요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "평일 오전 10시~오후 7시, 토요일·일요일·공휴일 오전 10시~오후 2시 운영합니다. 점심 시간(오후 1시 30분~2시 30분)에는 진료가 제한됩니다." }
+            },
+            {
+              "@type": "Question",
+              "name": "치료비 카드 결제와 할부가 가능한가요?",
+              "acceptedAnswer": { "@type": "Answer", "text": "모든 카드 결제와 무이자 할부가 가능합니다. 치료 시작 전 상세한 견적과 치료 계획을 투명하게 안내드리며, 분납 상담도 가능합니다." }
             }
+          ]
+        },
+
+        {
+          "@type": "ItemList",
+          "@id": "https://www.balance-dental.co.kr/#treatment-list",
+          "name": "밸런스치과병원 주요 진료 목록",
+          "description": "판교 밸런스치과병원이 제공하는 주요 치과 진료 서비스",
+          "itemListOrder": "https://schema.org/ItemListOrderAscending",
+          "numberOfItems": 7,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "임플란트", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 2, "name": "투명교정 (클리어얼라이너)", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 3, "name": "무삭제 라미네이트", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 4, "name": "원데이 치료", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 5, "name": "턱관절치료 (TMJ)", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 6, "name": "수면치료·의식하진정", "url": "https://www.balance-dental.co.kr/#treatments" },
+            { "@type": "ListItem", "position": 7, "name": "치주치료 (잇몸치료)", "url": "https://www.balance-dental.co.kr/#treatments" }
           ]
         },
 
@@ -405,11 +523,6 @@
             { "@type": "ListItem", "position": 4, "name": "자주 묻는 질문", "item": "https://www.balance-dental.co.kr/#faq" },
             { "@type": "ListItem", "position": 5, "name": "오시는 길", "item": "https://www.balance-dental.co.kr/#location" }
           ]
-        },
-
-        {
-          "@type": "Speakable",
-          "cssSelector": ["h1", ".section-title", ".section-label"]
         }
 
       ]
