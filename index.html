@@ -15,6 +15,33 @@
     <link rel="canonical" href="https://www.balance-dental.co.kr/" />
 
     <!-- ======================================================
+         파비콘 & 앱 아이콘
+    ====================================================== -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- ======================================================
+         다국어 hreflang (한국어/영어/일본어/중국어)
+         — 구글 다국어 사이트 인식, 네이버 글로벌 최적화
+    ====================================================== -->
+    <link rel="alternate" hreflang="ko" href="https://www.balance-dental.co.kr/?lang=ko" />
+    <link rel="alternate" hreflang="en" href="https://www.balance-dental.co.kr/?lang=en" />
+    <link rel="alternate" hreflang="ja" href="https://www.balance-dental.co.kr/?lang=ja" />
+    <link rel="alternate" hreflang="zh" href="https://www.balance-dental.co.kr/?lang=zh" />
+    <link rel="alternate" hreflang="x-default" href="https://www.balance-dental.co.kr/" />
+
+    <!-- ======================================================
+         핵심 리소스 사전 로드 (Core Web Vitals LCP 최적화)
+    ====================================================== -->
+    <link rel="preload" as="image" href="/assets/hero-tooth.png" fetchpriority="high" />
+    <link rel="dns-prefetch" href="https://www.mediqr.io" />
+    <link rel="dns-prefetch" href="https://balanceai.asuscomm.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+
+    <!-- ======================================================
          지역 SEO
     ====================================================== -->
     <meta name="geo.region" content="KR-41" />
@@ -58,7 +85,10 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="밸런스치과병원 — 판교 그레이츠 3층" />
     <meta property="og:locale" content="ko_KR" />
-    <meta property="og:updated_time" content="2026-05-06T00:00:00+09:00" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="ja_JP" />
+    <meta property="og:locale:alternate" content="zh_CN" />
+    <meta property="og:updated_time" content="2026-05-07T00:00:00+09:00" />
 
     <!-- ======================================================
          Twitter / X Card
@@ -86,8 +116,12 @@
     <meta name="category" content="Medical, Dental, Healthcare" />
     <meta name="subject" content="판교 치과 전문 의료 서비스" />
     <!-- 콘텐츠 최신성 신호 -->
-    <meta name="revised" content="2026-05-06" />
-    <meta name="date" content="2026-05-06" />
+    <meta name="revised" content="2026-05-07" />
+    <meta name="date" content="2026-05-07" />
+    <!-- 네이버 지식iN·블로그 연동 힌트 -->
+    <meta name="naverblog" content="https://blog.naver.com/balance_dental" />
+    <!-- 다국어 콘텐츠 언어 명시 -->
+    <meta http-equiv="content-language" content="ko, en, ja, zh" />
 
     <!-- ======================================================
          JSON-LD 구조화 데이터
@@ -99,7 +133,7 @@
       "@graph": [
 
         {
-          "@type": "Dentist",
+          "@type": ["Dentist", "LocalBusiness", "MedicalOrganization"],
           "@id": "https://www.balance-dental.co.kr/#organization",
           "name": "밸런스치과병원",
           "alternateName": ["Balance Dental Hospital", "밸런스치과", "판교밸런스치과"],
@@ -116,7 +150,7 @@
           ],
           "description": "보철·교정·구강악안면외과·치주과 전문의 9명이 협진하는 판교 밸런스치과병원. 임플란트, 투명교정, 무삭제라미네이트, 원데이 치료, 턱관절치료, 수면진정치료 전문. 신분당선 판교역 2번 출구 바로 앞, 그레이츠 판교 3층.",
           "telephone": "031-622-7528",
-          "email": "contact@balance-dental.co.kr",
+          "email": "hello@balance-dental.kr",
           "foundingDate": "2020",
           "address": {
             "@type": "PostalAddress",
@@ -143,6 +177,15 @@
               "dayOfWeek": ["Saturday","Sunday"],
               "opens": "10:00",
               "closes": "14:00"
+            }
+          ],
+          "specialOpeningHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "13:30",
+              "closes": "14:30",
+              "description": "점심 시간 (진료 제한)"
             }
           ],
           "contactPoint": [
@@ -314,7 +357,10 @@
           "sameAs": [
             "https://map.naver.com/p/search/밸런스치과병원",
             "https://map.kakao.com/link/map/밸런스치과병원,37.39543,127.11074",
-            "https://place.map.kakao.com/밸런스치과병원"
+            "https://place.map.kakao.com/밸런스치과병원",
+            "https://www.youtube.com/@balancedental",
+            "https://www.instagram.com/balance_dental",
+            "https://blog.naver.com/balance_dental"
           ]
         },
 
@@ -324,10 +370,10 @@
           "url": "https://www.balance-dental.co.kr",
           "name": "밸런스치과병원 | 판교 임플란트·교정·라미네이트·치주 전문",
           "description": "판교 밸런스치과병원 공식 홈페이지. 보철·교정·구강악안면외과·치주과 전문의 9명 협진, 임플란트·투명교정·무삭제라미네이트·수면진정치료.",
-          "inLanguage": "ko-KR",
+          "inLanguage": ["ko-KR", "en", "ja", "zh"],
           "isPartOf": { "@id": "https://www.balance-dental.co.kr/#website" },
           "about": { "@id": "https://www.balance-dental.co.kr/#organization" },
-          "dateModified": "2026-05-06",
+          "dateModified": "2026-05-07",
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [
@@ -347,7 +393,7 @@
           "name": "밸런스치과병원 소개 영상",
           "description": "판교 밸런스치과병원 소개 영상. 전문의 협진 시스템, 편안한 진료 환경, 임플란트·교정·라미네이트 치료 과정을 확인하세요.",
           "thumbnailUrl": "https://img.youtube.com/vi/wHpvI1MQfJs/maxresdefault.jpg",
-          "uploadDate": "2024-01-01",
+          "uploadDate": "2024-01-01T00:00:00+09:00",
           "contentUrl": "https://www.youtube.com/watch?v=wHpvI1MQfJs",
           "embedUrl": "https://www.youtube.com/embed/wHpvI1MQfJs",
           "inLanguage": "ko-KR",
@@ -505,12 +551,50 @@
           "url": "https://www.balance-dental.co.kr",
           "name": "밸런스치과병원",
           "description": "판교 밸런스치과병원 공식 홈페이지 — 임플란트·교정·라미네이트·원데이 치료",
-          "inLanguage": "ko-KR",
+          "inLanguage": ["ko-KR", "en", "ja", "zh"],
           "publisher": { "@id": "https://www.balance-dental.co.kr/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://www.balance-dental.co.kr/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": "https://www.balance-dental.co.kr/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            },
+            {
+              "@type": "ReserveAction",
+              "name": "예약 신청",
+              "target": "https://www.balance-dental.co.kr/#booking"
+            }
+          ]
+        },
+
+        {
+          "@type": "Event",
+          "@id": "https://www.balance-dental.co.kr/#free-consult",
+          "name": "밸런스치과병원 무료 초진 상담",
+          "description": "초진 당일 X-ray 및 구강검진 후 치료 계획을 상담해드립니다. 비용 없이 충분한 설명을 드립니다.",
+          "startDate": "2020-01-01",
+          "endDate": "2099-12-31",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "밸런스치과병원",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "백현동 535 그레이츠 판교 3층",
+              "addressLocality": "성남시 분당구",
+              "addressRegion": "경기도",
+              "postalCode": "13494",
+              "addressCountry": "KR"
+            }
+          },
+          "organizer": { "@id": "https://www.balance-dental.co.kr/#organization" },
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "KRW",
+            "availability": "https://schema.org/InStock",
+            "url": "https://www.balance-dental.co.kr/#booking"
           }
         },
 
