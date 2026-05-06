@@ -85,19 +85,23 @@ export default function BookingCTA({ onSubmit }) {
     setErrorMsg('');
 
     try {
-      const visitInfo = form.preferredDate && form.preferredTimeSlot
-        ? `${formatDateKo(form.preferredDate)} ${form.preferredTimeSlot}`
-        : '';
+      const visitParts = [];
+      if (form.preferredDate && form.preferredTimeSlot) {
+        visitParts.push(`1순위 : ${form.preferredDate} ${form.preferredTimeSlot}`);
+      }
       const message = [
-        visitInfo ? `희망 방문일시: ${visitInfo}` : '',
+        visitParts.length ? `예약 희망 날짜\n${visitParts.join('\n')}` : '',
         form.notes ? `추가 메시지: ${form.notes}` : '',
       ].filter(Boolean).join('\n');
+
+      const tags = ['예약관련'];
+      if (form.treatment && form.treatment !== '기타 상담') tags.push(form.treatment);
 
       const res = await fetch(API_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          tags: [form.treatment],
+          tags,
           message,
           replyMethod: '전화',
           replyContact: form.phone,

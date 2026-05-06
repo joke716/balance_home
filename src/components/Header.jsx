@@ -167,9 +167,10 @@ export default function Header({ onBookClick }) {
 
       <aside
         className="hide-desktop"
-        aria-hidden={!menuOpen}
+        {...(!menuOpen ? { inert: '' } : {})}
         role="dialog"
         aria-modal="true"
+        aria-label="내비게이션 메뉴"
         style={{
           position: 'fixed',
           top: 0,

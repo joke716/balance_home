@@ -47,9 +47,9 @@ const DOCTORS = [
     role: '대표원장 · 치과교정과 인정의',
     image: '/assets/doctors/park-heejung.jpg',
     bio: [
+      '서울대학교 치과대학 졸업',
       '보건복지부 인증 통합치의학과 전문의',
       '고려대학교 임상치의학 대학원 교정학 석사',
-      '인제대학교 일산백병원 치과교정과 임상강사',
     ],
   },
   {
@@ -70,6 +70,16 @@ const DOCTORS = [
       '서울대학교 치의학대학원 치의학 박사과정',
       '두바이 치과의사 면허 보유 (DHA License)',
       '부산대학교 치의학전문대학원 석사',
+    ],
+  },
+  {
+    name: '윤희준',
+    role: '원장 · 치주과전문의',
+    image: '/assets/doctors/yoon-heejun.jpg',
+    bio: [
+      '부산대학교 치의학전문대학원 석사',
+      '경희대학교 치과병원 인턴 / 경의대 치주과 레지던트',
+      '보건복지부 인정 치주과 전문의',
     ],
   },
   {
@@ -162,10 +172,10 @@ export default function DoctorsGrid() {
             <div
               style={{
                 aspectRatio: '4/5',
-                background: `linear-gradient(160deg, ${TONES[i][0]} 0%, ${TONES[i][1]} 100%)`,
+                background: `linear-gradient(160deg, ${TONES[i % TONES.length][0]} 0%, ${TONES[i % TONES.length][1]} 100%)`,
                 backgroundImage: d.image
                   ? `linear-gradient(180deg, rgba(28,30,29,0) 65%, rgba(28,30,29,0.18) 100%), url(${d.image})`
-                  : `linear-gradient(160deg, ${TONES[i][0]} 0%, ${TONES[i][1]} 100%)`,
+                  : `linear-gradient(160deg, ${TONES[i % TONES.length][0]} 0%, ${TONES[i % TONES.length][1]} 100%)`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center top',
                 position: 'relative',
