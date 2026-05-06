@@ -1,6 +1,8 @@
 import Icon from './Icon.jsx';
+import { useLang } from '../i18n/LangContext.jsx';
 
 export default function Hero({ onBookClick }) {
+  const { t } = useLang();
   return (
     <section style={{ position: 'relative', overflow: 'hidden' }}>
       <div className="hero-bg">
@@ -30,7 +32,7 @@ export default function Hero({ onBookClick }) {
             marginBottom: 16,
           }}
         >
-          Balance Dental Hospital
+          {t.hero.badge}
         </div>
         <h1
           style={{
@@ -42,11 +44,10 @@ export default function Hero({ onBookClick }) {
             color: 'var(--ink)',
             margin: 0,
             maxWidth: 540,
+            whiteSpace: 'pre-line',
           }}
         >
-          불안을 낮추고
-          <br />
-          치료는 정확하게
+          {t.hero.h1}
         </h1>
         <p
           style={{
@@ -56,18 +57,17 @@ export default function Hero({ onBookClick }) {
             lineHeight: 1.7,
             color: 'var(--ink-2)',
             letterSpacing: '-0.01em',
+            whiteSpace: 'pre-line',
           }}
         >
-          환자분께 맞는 계획을 함께 정합니다.
-          <br />
-          밸런스치과병원는 정확한 진단과 충분한 상담을 원칙으로 합니다.
+          {t.hero.p}
         </p>
         {/* 병원 소개 동영상 */}
         <div
           className="hero-video-wrap"
           style={{
             marginTop: 2,
-              marginBottom: 12,
+            marginBottom: 12,
             width: '100%',
             maxWidth: 480,
             borderRadius: 14,
@@ -94,10 +94,10 @@ export default function Hero({ onBookClick }) {
         </div>
         <div style={{ display: 'flex', gap: 12, marginTop: 24, flexWrap: 'wrap' }}>
           <button className="btn btn-primary btn-lg" onClick={onBookClick}>
-            <Icon name="calendar" size={18} /> Balance AI 상담
+            <Icon name="calendar" size={18} /> {t.hero.cta}
           </button>
           <button className="btn btn-secondary btn-lg">
-            <Icon name="phone" size={18} /> 031-622-7528
+            <Icon name="phone" size={18} /> {t.hero.phone}
           </button>
         </div>
       </div>

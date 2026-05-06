@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
+import { useLang, LANG_OPTIONS } from '../i18n/LangContext.jsx';
 
-const NAV_ITEMS = [
-  { label: '진료안내', id: 'treatments' },
-  { label: '의료진', id: 'doctors' },
-  { label: 'FAQ', id: 'faq' },
-  { label: 'BalanceAI', id: 'balance-ai' },
-  { label: '오시는 길', id: 'location' },
+const NAV_IDS = [
+  { key: 'treatments', id: 'treatments' },
+  { key: 'doctors', id: 'doctors' },
+  { key: 'philosophy', id: 'philosophy' },
+  { key: 'faq', id: 'faq' },
+  { key: 'location', id: 'location' },
 ];
 
 function scrollToId(id) {
@@ -14,7 +15,8 @@ function scrollToId(id) {
   el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-export default function Header({ onBookClick }) {
+export default function Header({ onBookClick, onConsultClick }) {
+  const { t, lang, setLang } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -89,8 +91,8 @@ export default function Header({ onBookClick }) {
             />
             밸런스치과병원
           </a>
-          <nav style={{ display: 'flex', gap: 28 }} className="hide-mobile">
-            {NAV_ITEMS.map((it) => (
+          <nav style={{ display: 'flex', alignItems: 'center', gap: 24 }} className="hide-mobile">
+            {NAV_IDS.map((it) => (
               <a
                 key={it.id}
                 href={`#${it.id}`}
@@ -105,19 +107,43 @@ export default function Header({ onBookClick }) {
                   letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   textDecoration: 'none',
+                  whiteSpace: 'nowrap',
                 }}
               >
-                {it.label}
+                {t.nav[it.key]}
               </a>
             ))}
+            <button
+              className="btn btn-primary"
+              style={{ padding: '8px 16px', fontSize: 13, borderRadius: 8, whiteSpace: 'nowrap' }}
+              onClick={onConsultClick}
+            >
+              {t.nav.consult}
+            </button>
+            {/* 언어 전환 */}
+            <div style={{ display: 'flex', gap: 2 }}>
+              {LANG_OPTIONS.map((opt) => (
+                <button
+                  key={opt.code}
+                  onClick={() => setLang(opt.code)}
+                  style={{
+                    padding: '4px 8px',
+                    fontSize: 12,
+                    fontWeight: lang === opt.code ? 700 : 400,
+                    border: 'none',
+                    borderRadius: 6,
+                    cursor: 'pointer',
+                    background: lang === opt.code ? 'var(--primary-softer)' : 'transparent',
+                    color: lang === opt.code ? 'var(--primary)' : 'var(--ink-4)',
+                    transition: 'all 150ms ease',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
           </nav>
-          <button
-            className="btn btn-primary hide-mobile"
-            style={{ padding: '10px 18px', fontSize: 14, borderRadius: 8, whiteSpace: 'nowrap' }}
-            onClick={onBookClick}
-          >
-            AI 상담
-          </button>
           <button
             className="hide-desktop"
             aria-label={menuOpen ? '메뉴 닫기' : '메뉴 열기'}
@@ -239,7 +265,7 @@ export default function Header({ onBookClick }) {
         </div>
 
         <nav style={{ flex: 1, overflowY: 'auto', padding: '8px 0' }}>
-          {NAV_ITEMS.map((it) => (
+          {NAV_IDS.map((it) => (
             <a
               key={it.id}
               href={`#${it.id}`}
@@ -260,9 +286,31 @@ export default function Header({ onBookClick }) {
                 textDecoration: 'none',
               }}
             >
-              {it.label}
+              {t.nav[it.key]}
             </a>
           ))}
+          {/* 모바일 언어 전환 */}
+          <div style={{ display: 'flex', gap: 6, padding: '16px 24px', borderBottom: '1px solid var(--paper-2)' }}>
+            {LANG_OPTIONS.map((opt) => (
+              <button
+                key={opt.code}
+                onClick={() => setLang(opt.code)}
+                style={{
+                  padding: '6px 12px',
+                  fontSize: 13,
+                  fontWeight: lang === opt.code ? 700 : 400,
+                  border: '1px solid',
+                  borderColor: lang === opt.code ? 'var(--primary)' : 'var(--paper-3)',
+                  borderRadius: 8,
+                  cursor: 'pointer',
+                  background: lang === opt.code ? 'var(--primary-softer)' : '#fff',
+                  color: lang === opt.code ? 'var(--primary)' : 'var(--ink-3)',
+                }}
+              >
+                {opt.label}
+              </button>
+            ))}
+          </div>
         </nav>
 
         <div style={{ padding: 20, borderTop: '1px solid var(--paper-3)' }}>
@@ -276,7 +324,7 @@ export default function Header({ onBookClick }) {
             }}
             onClick={closeAnd(onBookClick)}
           >
-            AI 상담
+            {t.nav.consult}
           </button>
         </div>
       </aside>
